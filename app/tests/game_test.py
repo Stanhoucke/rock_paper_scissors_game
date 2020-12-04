@@ -32,8 +32,14 @@ class TestGame(unittest.TestCase):
     def test_play__paper_loses_to_scissors(self):
         self.assertEqual("Player 2 wins by playing scissors!", self.game.play(self.player_2.choice, self.player_3.choice))
 
-    def test_play__invalid_player_choice(self):
+    def test_play__invalid_player_1_choice(self):
         # Assign invalid choice to player
         self.player_1.choice = "Lizard"
+        message = "One of the players didn't choose 'rock', 'paper', or 'scissors', please check your spelling and try again."
+        self.assertEqual(message, self.game.play(self.player_1.choice, self.player_2.choice))
+    
+    def test_play__invalid_player_2_choice(self):
+        # Assign invalid choice to player
+        self.player_2.choice = "Spock"
         message = "One of the players didn't choose 'rock', 'paper', or 'scissors', please check your spelling and try again."
         self.assertEqual(message, self.game.play(self.player_1.choice, self.player_2.choice))
