@@ -19,3 +19,6 @@ class TestGame(unittest.TestCase):
 
     def test_play__scissors_beat_paper(self):
         self.assertEqual("Player 1 wins by playing scissors!", self.game.play(self.player_3.choice, self.player_2.choice))
+
+    def test_play__return_tie(self):
+        self.assertEqual("It's a tie!", self.game.play(self.player_2.choice, self.player_2.choice))
