@@ -6,4 +6,4 @@ from app.classes.game import Game
 
 @app.route("/")
 def index():
-    return "Hello, world!"
+    return render_template("index.html")
