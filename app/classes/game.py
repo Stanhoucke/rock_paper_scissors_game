@@ -21,6 +21,6 @@ class Game():
             elif player_1_choice == "Scissors" and player_2_choice == "Paper":
                 return f"Player 1 wins by playing {player_1_choice.lower()}!"
             elif player_1_choice == player_2_choice:
-                return "It's a tie!"
+                return None
             else:
                 return f"Player 2 wins by playing {player_2_choice.lower()}!"
