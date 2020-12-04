@@ -3,4 +3,4 @@ class Player():
         self.name = input_name
         self.choice = input_choice
 
-# Choices ["Rock", "Paper", "Scissors"]
+# Choices ["rock", "paper", "scissors"]
