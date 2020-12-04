@@ -1,2 +1,4 @@
 class Game():
-    pass
+    
+    def play(self, player_1, player_2):
+        pass

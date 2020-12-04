@@ -1,4 +1,6 @@
 class Player():
-    def __init__(self, input_name):
+    def __init__(self, input_name, input_choice):
         self.name = input_name
-        self.choice = ["Rock", "Paper", "Scissors"]
+        self.choice = input_choice
+
+# Choices ["Rock", "Paper", "Scissors"]
