@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@401&display=swap');
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    font-family: 'Caveat', cursive;
+    background-color: lightslategray;
+    color: firebrick;
+    padding: 1%;
+    display: grid;
+    grid-template-areas: 'title' 'nav';
+    grid-template-columns: 7fr 3fr;
+}
+#title {
+    grid-area: 'title';
+}
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    font-size: x-large;
+    grid-area: 'nav';
+}
+
+.main-nav a:link, a:visited {
+    color: firebrick;
+}
+
+#how-to-play{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
