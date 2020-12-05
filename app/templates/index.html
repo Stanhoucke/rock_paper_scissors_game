@@ -1,11 +1,42 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <article id="how-to-play">
-        <h2>How To Play</h2>
-        <p>
-            Enter two of "rock", "paper", or "scissors" separated by a "/ " at the end of the page's URL to play!
-        </p>
-    </article>    
+    <main id="index-container">
+        <article id="choices-description">
+            <!-- Image source: https://mathladyhazel.medium.com/how-to-always-win-rock-paper-scissors-452eecb95dc5 -->
+            <div class="choice-box" id="rock-box">
+                <h3>Rock</h3>
+                <img src="{{ url_for('static', filename='images/rock.png') }}" alt="rock">
+                <p><em>Smash your opponent...</em></p>
+            </div>
+            <div class="choice-box" id="paper-box">
+                <h3>Paper</h3>
+                <img src="{{ url_for('static', filename='images/paper.png') }}" alt="paper">
+                <p><em>Stifle your opponent...</em></p>
+            </div>
+            <div class="choice-box" id="scissors-box">
+                <h3>Scissors</h3>
+                <img src="{{ url_for('static', filename='images/scissors.png') }}" alt="scissors">
+                <p><em>Slice your opponent...</em></p>
+            </div>
+        </article>
+        
+        <article id="how-to-play">
+            <h2>How To Play</h2>
+            <section class="rules">
+                <h3>Browser</h3>
+                <p>
+                    Enter two of "rock", "paper", or "scissors" separated by a "/ " at the end of the page's URL to play!
+                </p>
+            </section>
+            <section class="rules">
+                <h3>Against Computer</h3>
+                <p>
+                    Click on <u>Play Computer</u> in the navigation menu
+                </p>
+            </section>
+        </article>
+    
+    </main>
 
 {% endblock %}

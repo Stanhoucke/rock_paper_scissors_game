@@ -24,4 +24,4 @@ def play_computer():
         player_1 = Player(request.form["name"], request.form["choice"])
         computer_choice = game.computer_choice()
         result = game.play(player_1.choice, computer_choice)
-        return render_template("result.html", player_1_choice = player_1.choice, player_2_choice = computer_choice, result = result)
+        return render_template("result.html", player_1_choice = player_1.choice, player_1_name = player_1.name, player_2_choice = computer_choice, result = result)

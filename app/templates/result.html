@@ -2,8 +2,13 @@
 
 {% block content %}
     <article id="result">
+        {% if not player_1_name %}
         <h2>Player 1 chose: <b>{{ player_1_choice }}</b></h2>
         <h2>Player 2 chose: <b>{{ player_2_choice }}</b></h2>
+        {% else %}
+        <h2>{{ player_1_name }} chose: <b>{{ player_1_choice }}</b></h2>
+        <h2>The computer chose: <b>{{ player_2_choice }}</b></h2>
+        {% endif %}
     
         <h2>And the winner is...</h2>
         <p>{{ result }}</p>
