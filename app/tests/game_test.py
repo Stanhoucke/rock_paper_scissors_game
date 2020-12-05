@@ -50,3 +50,13 @@ class TestGame(unittest.TestCase):
     # Tests for computer choice method
     def test_computer_choice__returns_valid_option(self):
         self.assertTrue(self.game.computer_choice() in self.choice_list)
+
+    # Tests for play using computer choice
+    def test_play_against_computer__returns_valid_winner(self):
+        computer_choice = self.game.computer_choice()
+        if computer_choice == "rock":
+            self.assertEqual(None, self.game.play(self.player_1.choice, computer_choice))
+        elif computer_choice == "paper":
+            self.assertEqual("Player 2 wins by playing paper!", self.game.play(self.player_1.choice, computer_choice))
+        elif computer_choice == "scissors":
+            self.assertEqual("Player 1 wins by playing rock!", self.game.play(self.player_1.choice, computer_choice))
