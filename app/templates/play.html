@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <article id="play-computer">
+        <h2>Play against the computer</h2>
+        <form>
+            <label for="name">Player name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="choice">Choice:</label><br>
+            <select name="choice" id="choice">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+            <input type="submit" value="Play!">
+        </form>
+    </article>
+{% endblock %}
