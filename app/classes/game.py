@@ -1,3 +1,5 @@
+import random
+
 class Game():
     
     def play(self, player_1_choice, player_2_choice):
@@ -28,3 +30,8 @@ class Game():
                 return None
             else:
                 return f"Player 2 wins by playing {player_2_choice}!"
+
+    def computer_choice(self):
+        choice_list = ["rock", "paper", "scissors"]
+        computer_choice = random.choices(choice_list)
+        return computer_choice[0]

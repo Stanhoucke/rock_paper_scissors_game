@@ -11,6 +11,9 @@ class TestGame(unittest.TestCase):
 
         self.game = Game()
 
+        self.choice_list = ["rock", "paper", "scissors"]
+
+    # Tests for play method
     def test_play__rock_beats_scissors(self):
         self.assertEqual("Player 1 wins by playing rock!", self.game.play(self.player_1.choice, self.player_3.choice))
 
@@ -43,3 +46,7 @@ class TestGame(unittest.TestCase):
         self.player_2.choice = "Spock"
         message = "One of the players didn't choose 'rock', 'paper', or 'scissors', please check your spelling and try again."
         self.assertEqual(message, self.game.play(self.player_1.choice, self.player_2.choice))
+
+    # Tests for computer choice method
+    def test_computer_choice__returns_valid_option(self):
+        self.assertTrue(self.game.computer_choice() in self.choice_list)
